@@ -19,7 +19,7 @@
     </header>
 
 <!-- The GSMEAC form -->
-    <div id="gsmeacform" class="row small-12 columns">
+    <div id="gsmeacform" class="row small-12 columns">  <!-- This starts out visible -->
       <div class="small-12 columns">
 
       
@@ -95,8 +95,8 @@
     </div>
 <!-- End of the actual GSMEAC form -->
 
-<!-- Start of brief part -->
-	<div style="display:none;" id="brief" class="row">
+<!-- Start of brief part --> 
+	<div style="display:none;" id="brief" class="row"> <!-- This starts out invisible -->
 		<div class="large-12 columns">
 			<h3>Ground</h3>
 			<p id="gtext"></p>
@@ -116,7 +116,7 @@
 			<a href="#" class="button small" onclick="javascript:rain()">It's raining. Put the waterproof case on.</a>
 		</div>
 	</div>
-	<!-- End of brief part -->
+<!-- End of brief part -->
 
 	
         
@@ -124,11 +124,12 @@
     <script>
     	//Swap from form to brief
     	function swap() {
-		    document.getElementById("brief").style.display = 'block';
-		    document.getElementById("gsmeacform").style.display = 'none';
+		    document.getElementById("brief").style.display = 'block'; //Make the Brief part visible
+		    document.getElementById("gsmeacform").style.display = 'none'; //Make the form part invisible
 
-		    //Pull in the text as a brief
-    		document.getElementById("gtext").innerText=document.getElementById("g").value;
+		    //Pull in the text as a brief 
+            //Put the test from each form field into the p under each heading in the brief section.
+    		document.getElementById("gtext").innerText=document.getElementById("g").value;  
     		document.getElementById("stext").innerText=document.getElementById("s").value;
     		document.getElementById("mtext1").innerText=document.getElementById("m").value;
     		document.getElementById("mtext2").innerText=document.getElementById("m").value;
@@ -136,7 +137,8 @@
     		document.getElementById("atext").innerText=document.getElementById("a").value;
     		document.getElementById("ctext").innerText=document.getElementById("c").value;
 		}
-		
+      
+		//Put the "waterproof case" on.
 		function rain() {
 			document.body.style.backgroundImage = "url('img/raindrops.jpg')";
 			document.body.style.backgroundSize = "cover";

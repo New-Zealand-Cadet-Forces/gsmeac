@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body style="max-width: 100%;">
+    
+    <header class="row">
+    	<div class="small-3 columns">
+    		<img src="img/crest.jpg">
+		</div>
+		<div class="small-9 columns">
+			<h1>NZCF GSMEAC</h1>
+		</div>
+    </header>
+
+<!-- The GSMEAC form -->
+    <div id="gsmeacform" class="row small-12 columns">
+      <div class="small-12 columns">
+
+      
+      	<form>
+      	<div class="">
+		    <div class="large-12 columns">
+		      <label><h3>G</h3>Ground: decribe the area.
+		        <textarea id="g" placeholder="Define the area in which the task will be undertaken, including any hazards and restricting factors. "></textarea>
+		      </label>
+		    </div>
+		  </div>
+		  <div class="">
+		    <div class="large-12 columns">
+		      <label><h3>S</h3>Situation: the background.
+		        <textarea id="s" placeholder="A general background of the task and the time the task needs to be completed by. "></textarea>
+		      </label>
+		    </div>
+		  </div>
+		  <div class="">
+		    <div class="large-12 columns">
+		      <label><h3>M</h3>Mission: what is the task (to say twice)
+		        <textarea id="m" placeholder="A short concise statement detailing the task, who is to complete it and when it needs to be completed by. (When giving orders this is stated twice). "></textarea>
+		      </label>
+		    </div>
+		  </div>
+		  <div class="">
+		    <div class="large-12 columns">
+		      <label><h3>E</h3>Execution: how the task is to be done.
+		        <textarea id="e" rows="7" placeholder="How the task is going to be completed. This can include, but is not limited to:
+		a. General Outline:
+		  (1) A word picture i.e. this task will be conducted in three stages.
+		  (2) Move to the task site, the completion of the task and the move back to
+		  the base location.
+		b. Detailed Tasks:
+		  (1) Any specific tasks allocated to groups or sub groups for each stage.
+		c. Coordinating Instructions:
+		  (1) Timings critical to the tasks.
+		  (2) Limitations and restrictions. 
+		d. Actions On:
+		  (1) What to do if lost, injured etc.
+		  (2) Safety. "></textarea>
+		      </label>
+		    </div>
+		  </div>
+		  <div class="">
+		    <div class="large-12 columns">
+		      <label><h3>A</h3>Administration and Logistics: other stuff.
+		        <textarea id="a" rows="7" placeholder="Additional factors that may impact the task. This can include, but is not limited to:
+		a. Administration and Logistics in support of the completion of the task;
+		b. Meal timings and location;
+		c. Rest periods;
+		d. Accommodation;
+		e. Equipment;
+		f. Dress; and
+		g. Medical. "></textarea>
+		      </label>
+		    </div>
+		  </div>
+		  <div class="">
+		    <div class="large-12 columns">
+		      <label><h3>C</h3>Command and Signals: the communication methods.
+		        <textarea id="c" placeholder="Who will be talking to who and how this will be done. This can include, but is not
+		limited to:
+		a. Command channels; and
+		b. Communication channels. "></textarea>
+		      </label>
+		    </div>
+		  </div>
+        </form>
+        
+		<button class="button" onclick="javascript:swap()">Submit</button>
+      </div>
+    </div>
+<!-- End of the actual GSMEAC form -->
+
+<!-- Start of brief part -->
+	<div style="display:none;" id="brief" class="row">
+		<div class="large-12 columns">
+			<h3>Ground</h3>
+			<p id="gtext"></p>
+			<h3>Situation</h3>
+			<p id="stext"></p>
+			<h3>Mission</h3>
+			<p id="mtext1"></p>
+			<h3>Mission</h3>
+			<p id="mtext2"></p>
+			<h3>Execution</h3>
+			<p id="etext"></p>
+			<h3>Admin and log</h3>
+			<p id="atext"></p>
+			<h3>Command and sigs</h3>
+			<p id="ctext"></p>
+
+			<a href="#" class="button small" onclick="javascript:towney()">I've changed my mind again. Take me to TOWNEY.</a>
+			<a href="#" class="button small" onclick="javascript:rain()">It's raining. Put the waterproof case on.</a>
+		</div>
+	</div>
+	<!-- End of brief part -->
+
+	<!-- TOWNEY -->
+	<div style="display:none;" id="towney" class="row">
+	<div class="small-12 columns"><h3>Are you kidding??</h3></div>
+	<div class="small-12 columns"><a href="index.html" class="button small">I've changed my mind again. Take me to GSMEAC.</a></div>
+	</div>
+    
+    
+
+    
+        
+       
+    <script>
+    	//Swap from form to brief
+    	function swap() {
+		    document.getElementById("brief").style.display = 'block';
+		    document.getElementById("gsmeacform").style.display = 'none';
+
+		    //Pull in the text as a brief
+    		document.getElementById("gtext").innerText=document.getElementById("g").value;
+    		document.getElementById("stext").innerText=document.getElementById("s").value;
+    		document.getElementById("mtext1").innerText=document.getElementById("m").value;
+    		document.getElementById("mtext2").innerText=document.getElementById("m").value;
+    		document.getElementById("etext").innerText=document.getElementById("e").value;
+    		document.getElementById("atext").innerText=document.getElementById("a").value;
+    		document.getElementById("ctext").innerText=document.getElementById("c").value;
+		}
+		function towney() {
+		    document.getElementById("brief").style.display = 'none';
+		    document.getElementById("gsmeacform").style.display = 'none';
+		    document.getElementById("towney").style.display = 'block';
+		}
+		function rain() {
+			document.body.style.backgroundImage = "url('img/raindrops.jpg')";
+			document.body.style.backgroundSize = "cover";
+		}
+		
+    </script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

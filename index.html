@@ -19,34 +19,23 @@
     </header>
 
 <!-- The GSMEAC form -->
-    <div id="gsmeacform" class="row small-12 columns">  <!-- This starts out visible -->
-      <div class="small-12 columns">
+    <div id="gsmeacform" class="row">  <!-- This starts out visible -->
+      <div class="small-11 columns">
 
-      
       	<form>
-      	<div class="">
-		    <div class="large-12 columns">
+      	
 		      <label><h3>G</h3>Ground: decribe the area.
 		        <textarea id="g" placeholder="Define the area in which the task will be undertaken, including any hazards and restricting factors. "></textarea>
 		      </label>
-		    </div>
-		  </div>
-		  <div class="">
-		    <div class="large-12 columns">
+		    
 		      <label><h3>S</h3>Situation: the background.
 		        <textarea id="s" placeholder="A general background of the task and the time the task needs to be completed by. "></textarea>
 		      </label>
-		    </div>
-		  </div>
-		  <div class="">
-		    <div class="large-12 columns">
+		    
 		      <label><h3>M</h3>Mission: what is the task (to say twice)
 		        <textarea id="m" placeholder="A short concise statement detailing the task, who is to complete it and when it needs to be completed by. (When giving orders this is stated twice). "></textarea>
 		      </label>
-		    </div>
-		  </div>
-		  <div class="">
-		    <div class="large-12 columns">
+		    
 		      <label><h3>E</h3>Execution: how the task is to be done.
 		        <textarea id="e" rows="7" placeholder="How the task is going to be completed. This can include, but is not limited to:
 		a. General Outline:
@@ -62,10 +51,7 @@
 		  (1) What to do if lost, injured etc.
 		  (2) Safety. "></textarea>
 		      </label>
-		    </div>
-		  </div>
-		  <div class="">
-		    <div class="large-12 columns">
+		    
 		      <label><h3>A</h3>Administration and Logistics: other stuff.
 		        <textarea id="a" rows="7" placeholder="Additional factors that may impact the task. This can include, but is not limited to:
 		a. Administration and Logistics in support of the completion of the task;
@@ -76,18 +62,14 @@
 		f. Dress; and
 		g. Medical. "></textarea>
 		      </label>
-		    </div>
-		  </div>
-		  <div class="">
-		    <div class="large-12 columns">
+		    
 		      <label><h3>C</h3>Command and Signals: the communication methods.
 		        <textarea id="c" placeholder="Who will be talking to who and how this will be done. This can include, but is not
 		limited to:
 		a. Command channels; and
 		b. Communication channels. "></textarea>
 		      </label>
-		    </div>
-		  </div>
+		    
         </form>
         
 		<button class="button" onclick="javascript:swap()">Submit</button>
@@ -97,7 +79,7 @@
 
 <!-- Start of brief part --> 
 	<div style="display:none;" id="brief" class="row"> <!-- This starts out invisible -->
-		<div class="large-12 columns">
+		<div class="small-12 columns">
 			<h3>Ground</h3>
 			<p id="gtext"></p>
 			<h3>Situation</h3>

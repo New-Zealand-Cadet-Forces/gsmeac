@@ -95,7 +95,9 @@
 			<h3>Command and sigs</h3>
 			<p id="ctext"></p>
 
-			<a href="#" class="button small" onclick="javascript:rain()">It's raining. Put the waterproof case on.</a>
+			<a href="#" id="rainbtn" class="button small" onclick="javascript:rain()">It's raining. Put the waterproof case on.</a>
+          
+            <a href="#" style="display:none;" id="norainbtn" class="button small" onclick="javascript:norain()">Take the waterproof case off.</a>
 		</div>
 	</div>
 <!-- End of brief part -->
@@ -125,6 +127,15 @@
 			document.body.style.background = "url('img/raindrops.jpg')";
 			document.body.style.backgroundSize = "cover";
             //document.body.classList.add("raining");
+            document.getElementById("norainbtn").style.display = 'inline'; //Make the rain off button visible
+		    document.getElementById("rainbtn").style.display = 'none'; //Make the rain cover button invisible
+		}
+        
+        //Take the "waterproof case" off.
+		function norain() {
+			document.body.style.background = 'none';
+            document.getElementById("norainbtn").style.display = 'none'; //Make the rain off button visible
+		    document.getElementById("rainbtn").style.display = 'inline'; //Make the rain cover button invisible
 		}
 		
     </script>

@@ -10,12 +10,16 @@
   <body style="max-width: 100%;">
     
     <header class="row">
-    	<div class="small-3 columns medium-1 column">
+    	<div class="small-2 columns medium-1 column">
     		<img src="img/crest.jpg">
 		</div>
-		<div class="small-9 columns medium-11 columns">
+		<div class="small-8 columns medium-10 columns">
 			<h1>NZCF GSMEAC</h1>
 		</div>
+        <div class="small-2 columns medium-1 column">
+            <button id="plustext" class="button tiny" onclick="javascript:textBig()">+</button>
+            <button id="minustext" class="button tiny" onclick="javascript:textSmall()">-</button>
+        </div>
     </header>
 
 <!-- The GSMEAC form -->
@@ -38,7 +42,7 @@
 		    
 		      <label><h3>E</h3>Execution: how the task is to be done.
 		        <textarea id="e" rows="7" placeholder="How the task is going to be completed. This can include, but is not limited to:
-		a. General Outline:
+        a. General Outline:
 		  (1) A word picture i.e. this task will be conducted in three stages.
 		  (2) Move to the task site, the completion of the task and the move back to
 		  the base location.
@@ -139,6 +143,14 @@
             document.getElementById("norainbtn").style.display = 'none'; //Make the rain off button visible
 		    document.getElementById("rainbtn").style.display = 'inline'; //Make the rain cover button invisible
 		}
+        
+        //Resize the text
+        function textBig() {
+            document.body.style.fontSize = 'larger';
+        }
+        function textSmall() {
+            document.body.style.fontSize = 'smaller';
+        }
 		
     </script>
     <script src="js/vendor/jquery.js"></script>

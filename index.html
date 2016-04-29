@@ -10,12 +10,18 @@
   <body style="max-width: 100%;">
     
     <header class="row">
-    	<div class="small-3 columns medium-1 column">
+    	<div class="small-2 columns medium-1 column">
     		<img src="img/crest.jpg">
 		</div>
-		<div class="small-9 columns medium-11 columns">
+		<div class="small-8 columns medium-10 columns">
 			<h1>NZCF GSMEAC</h1>
 		</div>
+<!-- Resize buttons -->
+        <div class="small-2 columns medium-1 column">
+            <button href="javascript:void(0);" onclick="resizeText(1)" id="plustext" class="button tiny">+</button>
+            <button href="javascript:void(0);" onclick="resizeText(-1)" id="minustext" class="button tiny">-</button>
+        </div>
+        
     </header>
 
 <!-- The GSMEAC form -->
@@ -38,7 +44,7 @@
 		    
 		      <label><h3>E</h3>Execution: how the task is to be done.
 		        <textarea id="e" rows="7" placeholder="How the task is going to be completed. This can include, but is not limited to:
-		a. General Outline:
+        a. General Outline:
 		  (1) A word picture i.e. this task will be conducted in three stages.
 		  (2) Move to the task site, the completion of the task and the move back to
 		  the base location.
@@ -139,6 +145,39 @@
             document.getElementById("norainbtn").style.display = 'none'; //Make the rain off button visible
 		    document.getElementById("rainbtn").style.display = 'inline'; //Make the rain cover button invisible
 		}
+        
+        //Resize
+        function resizeText(multiplier) {
+            var x = document.getElementsByTagName("label");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                if (x[i].style.fontSize == "") {
+                    x[i].style.fontSize = "1.0rem";
+                }
+                x[i].style.fontSize = parseFloat(x[i].style.fontSize) + (multiplier * 0.2) + "rem";
+            }
+            var y = document.getElementsByTagName("textarea");
+            for (i = 0; i < y.length; i++) {
+                if (y[i].style.fontSize == "") {
+                    y[i].style.fontSize = "1.0rem";
+                }
+                y[i].style.fontSize = parseFloat(y[i].style.fontSize) + (multiplier * 0.2) + "rem";
+            }
+            var y = document.getElementsByTagName("h3");
+            for (i = 0; i < y.length; i++) {
+                if (y[i].style.fontSize == "") {
+                    y[i].style.fontSize = "1.5rem";
+                }
+                y[i].style.fontSize = parseFloat(y[i].style.fontSize) + (multiplier * 0.2) + "rem";
+            }
+            var y = document.getElementsByTagName("p");
+            for (i = 0; i < y.length; i++) {
+                if (y[i].style.fontSize == "") {
+                    y[i].style.fontSize = "1.0rem";
+                }
+                y[i].style.fontSize = parseFloat(y[i].style.fontSize) + (multiplier * 0.2) + "rem";
+            }
+        }
 		
     </script>
     <script src="js/vendor/jquery.js"></script>

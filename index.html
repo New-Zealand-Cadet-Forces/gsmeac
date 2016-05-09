@@ -107,7 +107,15 @@
 		</div>
 	</div>
 <!-- End of brief part -->
-
+      
+<!-- Start of Open Document List -->
+    <div style="display:none;" id="docList" class="row">
+        <div class="small-12 columns">
+            <select id="savedDocs"></select>
+        </div>
+    </div>
+      
+<!-- End of Open Document List -->
 	
         
        
@@ -180,11 +188,30 @@
         }
         
         //Save to Local Storage
-        
-        function saveDoc() {
+                function saveDoc() {
             var saveName = document.getElementById("saveName").value;
             var saveData = document.getElementById("brief").innerHTML;
             localStorage.setItem(saveName, saveData);
+        }
+        
+        //Bring up the Open page
+        function docList() {
+            document.getElementById("docList").style.display = 'block';
+            document.getElementById("gsmeacform").style.display = 'none';
+            document.getElementById("brief").style.display = 'none';
+            
+            var sel = document.getElementById('savedDocs');
+            for(var i = 0; i < localStorage.length; i++) {
+                var opt = document.createElement('option');
+                opt.innerHTML = localStorage.key(i);
+                opt.value = localStorage.key(i);
+                sel.appendChild(opt);
+            }
+        }
+                
+        //Open a saved GSMEAC
+        function openDoc() {
+            document.getElementById("brief").innerHTML = localStorage.getItem("selected");
         }
 		
     </script>

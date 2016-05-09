@@ -178,6 +178,14 @@
                 y[i].style.fontSize = parseFloat(y[i].style.fontSize) + (multiplier * 0.2) + "rem";
             }
         }
+        
+        //Save to Local Storage
+        
+        function saveDoc() {
+            var saveName = document.getElementById("saveName").value;
+            var saveData = document.getElementById("brief").innerHTML;
+            localStorage.setItem(saveName, saveData);
+        }
 		
     </script>
     <script src="js/vendor/jquery.js"></script>

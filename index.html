@@ -26,9 +26,9 @@
 
 <!-- The GSMEAC form -->
     <div id="gsmeacform" class="row">  <!-- This starts out visible -->
-        <button class="button small" onclick="javascript:docList()">Open</button>
+        
       <div class="small-11 columns">
-
+          <button class="button small" onclick="javascript:docList()">Open</button>
       	<form>
       	
 		      <label><h3>G</h3>Ground: decribe the area.
@@ -103,6 +103,7 @@
 			<p id="ctext"></p>
 
             <button class="button small" onclick="javascript:saveDoc()">Save</button>
+            <button class="button small" onclick="javascript:editDoc()">Edit</button>
             <button class="button small" onclick="javascript:docList()">Open</button>
             
 			<a href="#" id="rainbtn" class="button small" onclick="javascript:rain()">It's raining. Put the waterproof case on.</a>
@@ -145,6 +146,11 @@
             
             document.body.scrollTop = document.documentElement.scrollTop = 0; //Makes the brief start at the top.
 		}
+        
+        function editDoc() {
+            document.getElementById("brief").style.display = 'none'; //Make the Brief part invisible
+		    document.getElementById("gsmeacform").style.display = 'block'; //Make the form part visible
+        }
       
 		//Put the "waterproof case" on.
 		function rain() {
@@ -210,6 +216,11 @@
             document.getElementById("brief").style.display = 'none';
             
             var sel = document.getElementById('savedDocs');
+            var i;
+            for(i=sel.options.length-1;i>=0;i--)
+            {
+                sel.remove(i);
+            }
             for(var i = 0; i < localStorage.length; i++) {
                 var opt = document.createElement('option');
                 opt.innerHTML = localStorage.key(i);

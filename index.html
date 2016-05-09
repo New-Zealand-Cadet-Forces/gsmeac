@@ -104,6 +104,8 @@
 			<a href="#" id="rainbtn" class="button small" onclick="javascript:rain()">It's raining. Put the waterproof case on.</a>
           
             <a href="#" style="display:none;" id="norainbtn" class="button small" onclick="javascript:norain()">Remove the waterproof case.</a>
+            
+            <button class="button small" onclick="javascript:saveDoc()">Save</button>
 		</div>
 	</div>
 <!-- End of brief part -->
@@ -188,8 +190,8 @@
         }
         
         //Save to Local Storage
-                function saveDoc() {
-            var saveName = document.getElementById("saveName").value;
+        function saveDoc() {
+            var saveName = prompt("Save as:", "Name of GSMEAC");
             var saveData = document.getElementById("brief").innerHTML;
             localStorage.setItem(saveName, saveData);
         }

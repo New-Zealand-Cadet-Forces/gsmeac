@@ -103,6 +103,7 @@
 			<p id="ctext"></p>
 
             <button class="button small" onclick="javascript:saveDoc()">Save</button>
+            <button class="button small" onclick="javascript:docList()">Open</button>
             
 			<a href="#" id="rainbtn" class="button small" onclick="javascript:rain()">It's raining. Put the waterproof case on.</a>
           
@@ -117,7 +118,8 @@
             <h3>Open a saved GSMEAC</h3>
             <p>Select from the following list of saved documents.</p>
             <select id="savedDocs"></select>
-            <button onclick="javascript:openDoc()">Open</button>
+            <button class="button small" onclick="javascript:openDoc()">Open</button>
+            <button style="float:right;" class="button alert small" onclick="javascript:goneBurger()">Delete</button>
         </div>
     </div>
       
@@ -198,6 +200,7 @@
             var saveName = prompt("Save as:", "Name of GSMEAC");
             var saveData = document.getElementById("brief").innerHTML;
             localStorage.setItem(saveName, saveData);
+            alert("Document saved.");
         }
         
         //Bring up the Open page
@@ -223,6 +226,19 @@
             document.getElementById("docList").style.display = 'none';
             document.getElementById("gsmeacform").style.display = 'none';
             document.getElementById("brief").style.display = 'block';
+        }
+        
+        //Delete a saved document
+        function goneBurger() {
+            var r = confirm("Delete selected document?");
+            if (r == true) {
+                var selected = document.getElementById('savedDocs').value;
+                localStorage.removeItem(selected);
+                location.reload(true);
+            } else {
+                //nothing
+            }
+            
         }
 		
     </script>

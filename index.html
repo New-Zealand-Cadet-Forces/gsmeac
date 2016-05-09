@@ -26,6 +26,7 @@
 
 <!-- The GSMEAC form -->
     <div id="gsmeacform" class="row">  <!-- This starts out visible -->
+        <button class="button small" onclick="javascript:docList()">Open</button>
       <div class="small-11 columns">
 
       	<form>
@@ -113,7 +114,10 @@
 <!-- Start of Open Document List -->
     <div style="display:none;" id="docList" class="row">
         <div class="small-12 columns">
+            <h3>Open a saved GSMEAC</h3>
+            <p>Select from the following list of saved documents.</p>
             <select id="savedDocs"></select>
+            <button onclick="javascript:openDoc()">Open</button>
         </div>
     </div>
       
@@ -213,7 +217,12 @@
                 
         //Open a saved GSMEAC
         function openDoc() {
-            document.getElementById("brief").innerHTML = localStorage.getItem("selected");
+            var selected = document.getElementById('savedDocs').value;
+            document.getElementById("brief").innerHTML = localStorage.getItem(selected);
+            
+            document.getElementById("docList").style.display = 'none';
+            document.getElementById("gsmeacform").style.display = 'none';
+            document.getElementById("brief").style.display = 'block';
         }
 		
     </script>

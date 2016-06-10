@@ -20,7 +20,7 @@ To use as a smartphone app:
 *   Use the app by selecting the icon you have just made.
 
 ### Writing orders
-On most devices there are a couple options for entering text into the text boxes.
+On most devices there are a couple of options for entering text into the text boxes.
 *  Tap or click into the box you wish to populate and the on-screen keyboard should appear as usual.
 *  If your device has the ability to use speech dictation, follow the device's instructions to use that function.
 
@@ -36,12 +36,12 @@ Because of the simplicity of the app's construction, there are some limitations 
 
 #### To save a set of orders:
 *  Once you have submitted the text and produced the on-screen script, select the save option at the bottom of the screen.
-*  Enter a name to describe the set of orders. **Warning** If you save over another set of orders by mistakenly using the same name, there is no way to undo and the original orders will be lost.
+*  Enter a name to describe the set of orders. **!Warning!** *If you save over another set of orders by mistakenly using the same name, there is no way to undo and the original orders will be lost.*
 *  A dialogue will show to tell you the save was successful.
 
 #### To open saved orders:
 *  From an empty form, select the open button at the top, OR
-*  From the script screen, select the open button at the bottom. **Warning** Any unsaved work will be lost as soon as the open button is selected.
+*  From the script screen, select the open button at the bottom. **!Warning!** *Any unsaved work will be lost as soon as the open button is selected.*
 *  Select the drop-down menu and pick the orders you wish to display (you may need to select "Done" or similar to confirm this, depending on your device).
 *  Select the open button to display the chosen orders.
 
@@ -49,12 +49,12 @@ Because of the simplicity of the app's construction, there are some limitations 
 *  From the script screen, scroll down and select the edit button.
 *  You will be returned to the form screen where you can edit the text.
 *  When you are finished editing click submit again.
-*  If you wish to save these changes, follow the instructions for saving, above. To overwrite the existing saved orders, simply enter the same name as the orders you wish to overwrite. **Warning** If you save over another set of orders by mistake there is no way to undo and the original orders will be lost.
+*  If you wish to save these changes, follow the instructions for saving, above. To overwrite the existing saved orders, simply enter the same name as the orders you wish to overwrite. **!Warning!** *If you save over another set of orders by mistake there is no way to undo and the original orders will be lost.*
 
 #### To delete saved orders
 *  Select the open button from any screen (as described above).
 *  Select the orders you wish to delete.
-*  Select the delete button. **Warning** This action can not be undone.
+*  Select the delete button. **!Warning!** *This action can not be undone.*
 *  You will be taken back to the blank form screen in order to complete the delete.
 
 ### Starting a new set of orders

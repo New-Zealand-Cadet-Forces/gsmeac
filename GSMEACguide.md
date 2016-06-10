@@ -12,14 +12,11 @@ How to use the app
 Since this is a web-based app, there is no need to install it on a device as it runs from the CF web server. 
 
 To use as a smartphone app: 
-*   navigate to cadetforces.org.nz/gsmeac
-*   follow your device's instructions for saving a website to your home screen.
-
-	This should put an icon on your home screen that is a shortcut to the above address.
-
-*   Use the app by selecting the icon you have just made.
-*   Unlike regular web pages, the back button in the browser has no function.
-*   Refreshing the browser will always take you to a new blank form **!Warning!** *This will result in loss of any unsaved work.*
+*  navigate to cadetforces.org.nz/gsmeac
+*  follow your device's instructions for saving a website to your home screen. This should put an icon on your home screen that is a shortcut to the above address.
+*  Use the app by selecting the icon you have just made.
+*  Unlike regular web pages, the back button in the browser has no function.
+*  Refreshing the browser will always take you to a new blank form **!Warning!** *This will result in loss of any unsaved work.*
 
 ### Writing orders
 On most devices there are a couple of options for entering text into the text boxes.

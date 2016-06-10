@@ -18,6 +18,8 @@ To use as a smartphone app:
 	This should put an icon on your home screen that is a shortcut to the above address.
 
 *   Use the app by selecting the icon you have just made.
+*   Unlike regular web pages, the back button in the browser has no function.
+*   Refreshing the browser will always take you to a new blank form **!Warning!** *This will result in loss of any unsaved work.*
 
 ### Writing orders
 On most devices there are a couple of options for entering text into the text boxes.

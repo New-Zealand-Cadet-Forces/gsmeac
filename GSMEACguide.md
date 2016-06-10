@@ -41,7 +41,7 @@ Because of the simplicity of the app's construction, there are some limitations 
 
 #### To open saved orders:
 *  From an empty form, select the open button at the top, OR
-*  From the script screen, select the open button at the bottom.
+*  From the script screen, select the open button at the bottom. **Warning** Any unsaved work will be lost as soon as the open button is selected.
 *  Select the drop-down menu and pick the orders you wish to display (you may need to select "Done" or similar to confirm this, depending on your device).
 *  Select the open button to display the chosen orders.
 

@@ -147,6 +147,7 @@
             document.body.scrollTop = document.documentElement.scrollTop = 0; //Makes the brief start at the top.
 		}
         
+        //Edit the open brief
         function editDoc() {
             document.getElementById("brief").style.display = 'none'; //Make the Brief part invisible
 		    document.getElementById("gsmeacform").style.display = 'block'; //Make the form part visible
@@ -232,11 +233,24 @@
         //Open a saved GSMEAC
         function openDoc() {
             var selected = document.getElementById('savedDocs').value;
-            document.getElementById("brief").innerHTML = localStorage.getItem(selected);
-            
-            document.getElementById("docList").style.display = 'none';
-            document.getElementById("gsmeacform").style.display = 'none';
-            document.getElementById("brief").style.display = 'block';
+            if(selected == "") {
+                alert("Please select the orders you wish to open or refresh the page to start a new set.")
+            } else {
+                document.getElementById("brief").innerHTML = localStorage.getItem(selected); //Put the saved info into the brief page
+
+                //Pull in the text as an editable form too 
+                //Put the test from each brief field into the editable form
+                document.getElementById("g").value=document.getElementById("gtext").innerText;  
+                document.getElementById("s").value=document.getElementById("stext").innerText;
+                document.getElementById("m").value=document.getElementById("mtext1").innerText;
+                document.getElementById("e").value=document.getElementById("etext").innerText;
+                document.getElementById("a").value=document.getElementById("atext").innerText;
+                document.getElementById("c").value=document.getElementById("ctext").innerText;
+
+                document.getElementById("docList").style.display = 'none';
+                document.getElementById("gsmeacform").style.display = 'none';
+                document.getElementById("brief").style.display = 'block';
+            }
         }
         
         //Delete a saved document
@@ -249,7 +263,6 @@
             } else {
                 //nothing
             }
-            
         }
 		
     </script>

@@ -61,3 +61,6 @@ If you wish to open a blank form in order to start a new GSMEAC, simply use the 
 
 ### Changing the text size
 The plus and minus buttons at top right will increase or decrease the size of the text. This will not resize button labels.
+
+## Please register bugs
+As this application is in Beta testing, there may still be bugs in the code. If anything has not worked as expected, please visit https://github.com/cadetforces/gsmeac/issues and create a new Issue to record the details so the bug can be fixed. 

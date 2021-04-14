@@ -3,13 +3,13 @@ GSMEAC APP USER GUIDE
 
 Introduction
 ------------
-This is a web-based app that can be used to write and deliver a set of orders in GSMEAC format using a mobile device.
+This is a web-based app that can be used to write and deliver a set of orders in GSMEAC format in the field using a mobile device.
 
 How to use the app
 ------------------
 
 ### Installing
-Since this is a web-based app, there is no need to install it on a device as it runs from the CF web server. 
+Since this is a web-based app, there is no need to install it on a device as it runs from the CF web server. You will need an internet connection when you first load it, but lots of the functionality after that will work without being connected to the internet.
 
 To use as a smartphone app: 
 *  navigate to cadetforces.org.nz/gsmeac
@@ -57,7 +57,7 @@ Because of the simplicity of the app's construction, there are some limitations 
 *  You will be taken back to the blank form screen in order to complete the delete.
 
 ### Starting a new set of orders
-If you wish to open a blank form in order to start a new GSMEAC, simply use the browser's refresh function. **Warning** Any unsaved work will be lost.
+If you wish to open a blank form in order to start a new GSMEAC, simply use the browser's refresh function. **Warning** *Any unsaved work will be lost.*
 
 ### Changing the text size
 The plus and minus buttons at top right will increase or decrease the size of the text. This will not resize button labels.
